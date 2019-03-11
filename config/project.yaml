@@ -1,0 +1,615 @@
+categoryGroups:
+  087abf1f-cac5-413b-ace5-b5917830429d:
+    handle: recentWork
+    name: 'Recent Work'
+    siteSettings:
+      bb495e7d-f915-49aa-8308-20cbf50527b1:
+        hasUrls: true
+        template: ''
+        uriFormat: 'categories/recent-work/{slug}'
+    structure:
+      maxLevels: null
+      uid: efe954c2-6bed-43f3-863b-a1441a950302
+  abd965e8-8e69-4a66-a06c-24f1bf6f0676:
+    handle: services
+    name: Services
+    siteSettings:
+      bb495e7d-f915-49aa-8308-20cbf50527b1:
+        hasUrls: true
+        template: ''
+        uriFormat: 'categories/services/{slug}'
+    structure:
+      maxLevels: null
+      uid: 1d82b83b-64f4-4546-8b15-9802488ea495
+dateModified: 1551935421
+email:
+  fromEmail: lee@carolinarsp.com
+  fromName: 'Carolina Roofing Siding Painting'
+  transportType: craft\mail\transportadapters\Sendmail
+fieldGroups:
+  042b3381-043d-410d-8977-44e5d2ab36d4:
+    name: Page
+  2757a9ca-b078-4b31-ac4a-5055c3c2c9f7:
+    name: 'Globals - Contact Info'
+  5f0b7bff-eabd-46d3-bcb6-b8e86453c141:
+    name: 'Recent Work'
+  8710ecc2-017f-4e8f-aacd-add49fdc8c66:
+    name: Common
+  ede6da26-d82d-42af-abf3-9eebcc35485e:
+    name: Testimonials
+fields:
+  089dc45f-ebdc-4290-915c-d14883254c2f:
+    contentColumnType: string
+    fieldGroup: 2757a9ca-b078-4b31-ac4a-5055c3c2c9f7
+    handle: addressStreet
+    instructions: ''
+    name: 'Street Address'
+    searchable: true
+    settings:
+      charLimit: '128'
+      code: ''
+      columnType: string
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  1aa65072-2d36-4207-b313-01deab69dc07:
+    contentColumnType: text
+    fieldGroup: 5f0b7bff-eabd-46d3-bcb6-b8e86453c141
+    handle: recentWorkDescription
+    instructions: 'This is the text that will appear on the Recent Work Detail page for this entry. '
+    name: Description
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: '1'
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  1c6df40e-613a-4349-9b33-4266ff2cd3ba:
+    contentColumnType: integer(10)
+    fieldGroup: 2757a9ca-b078-4b31-ac4a-5055c3c2c9f7
+    handle: zipCode
+    instructions: ''
+    name: 'Zip Code'
+    searchable: true
+    settings:
+      decimals: 0
+      defaultValue: null
+      max: null
+      min: '0'
+      size: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+  2577b52f-bbb1-4364-aa20-c9c7a341fcfc:
+    contentColumnType: string
+    fieldGroup: 5f0b7bff-eabd-46d3-bcb6-b8e86453c141
+    handle: tags
+    instructions: 'Select the type of work that was completed on this job.'
+    name: Tags
+    searchable: true
+    settings:
+      limit: null
+      localizeRelations: false
+      selectionLabel: ''
+      source: 'taggroup:b8200e98-56bc-434b-8524-8e231c2dca1b'
+      sources: '*'
+      targetSiteId: null
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Tags
+  25e02b09-4316-4e34-ab21-f675166d39c9:
+    contentColumnType: string
+    fieldGroup: 5f0b7bff-eabd-46d3-bcb6-b8e86453c141
+    handle: recentWorkFeaturedImage
+    instructions: 'Select or upload the primary image used for this Recent Work entry'
+    name: 'Featured Image'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:b3004120-501a-44fb-a7c5-f96a1c9a9548'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: ''
+      singleUploadLocationSource: 'volume:b3004120-501a-44fb-a7c5-f96a1c9a9548'
+      singleUploadLocationSubpath: images/recent-work
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: '1'
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  3eeb990d-fc6b-4cc6-8721-f2d19d6f7166:
+    contentColumnType: string
+    fieldGroup: 2757a9ca-b078-4b31-ac4a-5055c3c2c9f7
+    handle: addressState
+    instructions: ''
+    name: State
+    searchable: true
+    settings:
+      charLimit: '2'
+      code: ''
+      columnType: string
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  68759cb2-b476-42a5-813f-c0e2d9247830:
+    contentColumnType: string
+    fieldGroup: 2757a9ca-b078-4b31-ac4a-5055c3c2c9f7
+    handle: email
+    instructions: ''
+    name: Email
+    searchable: true
+    settings:
+      charLimit: '64'
+      code: ''
+      columnType: string
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  77f6f85b-bd42-40c4-b85b-333c4c6e26ea:
+    contentColumnType: text
+    fieldGroup: ede6da26-d82d-42af-abf3-9eebcc35485e
+    handle: testimonial
+    instructions: 'This is the formatted text to be displayed by the testimonial slider.'
+    name: Testimonial
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: '1'
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Simple.json
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  95b3f425-574a-4103-bd55-759baf87614c:
+    contentColumnType: string
+    fieldGroup: ede6da26-d82d-42af-abf3-9eebcc35485e
+    handle: submittingFullName
+    instructions: 'This is the full name of the person giving the testimonial.'
+    name: 'Full Name'
+    searchable: true
+    settings:
+      charLimit: '128'
+      code: ''
+      columnType: string
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'ex. John Doe'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  bc057fcf-3648-4540-ad38-4e5a1ebea09d:
+    contentColumnType: datetime
+    fieldGroup: 5f0b7bff-eabd-46d3-bcb6-b8e86453c141
+    handle: workCompletedDate
+    instructions: 'Select the date in which the work was completed.'
+    name: 'Work Completed Date'
+    searchable: true
+    settings:
+      minuteIncrement: '30'
+      showDate: true
+      showTime: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date
+  c22def8c-df38-483a-914e-8da4f8a8ff1c:
+    contentColumnType: string
+    fieldGroup: 042b3381-043d-410d-8977-44e5d2ab36d4
+    handle: featuredImage
+    instructions: 'Select or upload the primary image featured in the content block for this page. '
+    name: 'Featured Image'
+    searchable: true
+    settings:
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:b3004120-501a-44fb-a7c5-f96a1c9a9548'
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      restrictFiles: '1'
+      selectionLabel: 'Select or upload an image'
+      singleUploadLocationSource: 'volume:b3004120-501a-44fb-a7c5-f96a1c9a9548'
+      singleUploadLocationSubpath: images/services
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: ''
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  c364f227-8c4d-4c79-96ba-1c2a78383b4d:
+    contentColumnType: string
+    fieldGroup: 2757a9ca-b078-4b31-ac4a-5055c3c2c9f7
+    handle: phoneNumber
+    instructions: ''
+    name: 'Phone Number'
+    searchable: true
+    settings:
+      charLimit: '14'
+      code: ''
+      columnType: string
+      initialRows: '4'
+      multiline: ''
+      placeholder: '(555) 555-5555'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  cbba18cd-b60d-4031-8fe3-cf7aad4ae810:
+    contentColumnType: text
+    fieldGroup: 042b3381-043d-410d-8977-44e5d2ab36d4
+    handle: text
+    instructions: 'Enter the text you wish to display on this page.'
+    name: Text
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: '1'
+      columnType: text
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: Standard.json
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  d4923bab-0b72-4f6c-88e1-7284fbaaeedc:
+    contentColumnType: string
+    fieldGroup: ede6da26-d82d-42af-abf3-9eebcc35485e
+    handle: submittingPosition
+    instructions: 'This is the person giving the testimonials position. It will be displayed inline with the person''s name on the testimonial slider. '
+    name: Position
+    searchable: true
+    settings:
+      charLimit: '128'
+      code: ''
+      columnType: string
+      initialRows: '4'
+      multiline: ''
+      placeholder: 'President - MILF Inspectors Authority'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  e6b74884-e028-4ae3-8dd1-7efb045d5ed3:
+    contentColumnType: string
+    fieldGroup: 2757a9ca-b078-4b31-ac4a-5055c3c2c9f7
+    handle: addressCity
+    instructions: ''
+    name: City
+    searchable: true
+    settings:
+      charLimit: '64'
+      code: ''
+      columnType: string
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+globalSets:
+  774a4a3e-4cdd-4acb-8365-222b77c45e04:
+    fieldLayouts:
+      afc525ff-af69-4f2a-9e90-5e8bdfe2ea90:
+        tabs:
+          -
+            fields:
+              089dc45f-ebdc-4290-915c-d14883254c2f:
+                required: false
+                sortOrder: 1
+              1c6df40e-613a-4349-9b33-4266ff2cd3ba:
+                required: false
+                sortOrder: 4
+              3eeb990d-fc6b-4cc6-8721-f2d19d6f7166:
+                required: false
+                sortOrder: 3
+              68759cb2-b476-42a5-813f-c0e2d9247830:
+                required: false
+                sortOrder: 6
+              c364f227-8c4d-4c79-96ba-1c2a78383b4d:
+                required: false
+                sortOrder: 5
+              e6b74884-e028-4ae3-8dd1-7efb045d5ed3:
+                required: false
+                sortOrder: 2
+            name: 'Globals - Contact Info'
+            sortOrder: 1
+    handle: contactInfo
+    name: 'Contact Info'
+plugins:
+  cp-nav:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  dospaces:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  dumper:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  element-api:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  expanded-singles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  logs:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0
+  mailgun:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.2.2
+sections:
+  4171c9cb-4828-4523-b715-7c424292fb50:
+    enableVersioning: true
+    entryTypes:
+      f7e13c76-6447-4cec-9d09-7a9d6c1f7209:
+        fieldLayouts:
+          a7c8e6ad-7776-46e7-a5bf-a6b801f9476e:
+            tabs:
+              -
+                fields:
+                  1aa65072-2d36-4207-b313-01deab69dc07:
+                    required: false
+                    sortOrder: 4
+                  2577b52f-bbb1-4364-aa20-c9c7a341fcfc:
+                    required: false
+                    sortOrder: 1
+                  25e02b09-4316-4e34-ab21-f675166d39c9:
+                    required: false
+                    sortOrder: 3
+                  bc057fcf-3648-4540-ad38-4e5a1ebea09d:
+                    required: false
+                    sortOrder: 2
+                name: 'Recent Work'
+                sortOrder: 1
+        handle: recentWork
+        hasTitleField: true
+        name: 'Recent Work'
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: recentWork
+    name: 'Recent Work'
+    propagateEntries: true
+    siteSettings:
+      bb495e7d-f915-49aa-8308-20cbf50527b1:
+        enabledByDefault: true
+        hasUrls: true
+        template: ''
+        uriFormat: 'recent-work/{slug}'
+    type: channel
+  6296dbe9-fae2-478a-8453-a1cb057bf299:
+    enableVersioning: true
+    entryTypes:
+      f06afa7c-5d1d-4d42-8fb0-a78eaa3f9738:
+        fieldLayouts:
+          a6658c5c-7653-4b6c-b620-a59dde11b685:
+            tabs:
+              -
+                fields:
+                  c22def8c-df38-483a-914e-8da4f8a8ff1c:
+                    required: false
+                    sortOrder: 1
+                  cbba18cd-b60d-4031-8fe3-cf7aad4ae810:
+                    required: false
+                    sortOrder: 2
+                name: Page
+                sortOrder: 1
+        handle: financingPage
+        hasTitleField: false
+        name: 'Financing Page'
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: ''
+    handle: financingPage
+    name: 'Financing Page'
+    propagateEntries: true
+    siteSettings:
+      bb495e7d-f915-49aa-8308-20cbf50527b1:
+        enabledByDefault: true
+        hasUrls: true
+        template: ''
+        uriFormat: financing
+    type: single
+  709f7442-f92a-49d9-a582-e58e13edf36c:
+    enableVersioning: true
+    entryTypes:
+      c5c842ef-f9f9-4278-9e35-691ba5bce041:
+        fieldLayouts:
+          fa8d9aa7-14c0-4dc6-b073-a6ee1e8f4099:
+            tabs:
+              -
+                fields:
+                  c22def8c-df38-483a-914e-8da4f8a8ff1c:
+                    required: false
+                    sortOrder: 1
+                  cbba18cd-b60d-4031-8fe3-cf7aad4ae810:
+                    required: false
+                    sortOrder: 2
+                name: Services
+                sortOrder: 1
+        handle: services
+        hasTitleField: true
+        name: Services
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: 'Service Name'
+    handle: services
+    name: Services
+    propagateEntries: true
+    siteSettings:
+      bb495e7d-f915-49aa-8308-20cbf50527b1:
+        enabledByDefault: true
+        hasUrls: true
+        template: ''
+        uriFormat: 'services/{slug}'
+    type: channel
+  7be64775-9952-4439-8773-8cf084cc8a10:
+    enableVersioning: true
+    entryTypes:
+      18f5cd66-740d-4b88-bf1e-7d1c9bf12d60:
+        fieldLayouts:
+          ba09c77b-b16f-4f40-baac-9a15e2fe4f49:
+            tabs:
+              -
+                fields:
+                  77f6f85b-bd42-40c4-b85b-333c4c6e26ea:
+                    required: false
+                    sortOrder: 3
+                  95b3f425-574a-4103-bd55-759baf87614c:
+                    required: false
+                    sortOrder: 1
+                  d4923bab-0b72-4f6c-88e1-7284fbaaeedc:
+                    required: false
+                    sortOrder: 2
+                name: 'Tab 1'
+                sortOrder: 1
+        handle: testimonials
+        hasTitleField: true
+        name: Testimonials
+        sortOrder: 1
+        titleFormat: ''
+        titleLabel: Title
+    handle: testimonials
+    name: Testimonials
+    propagateEntries: true
+    siteSettings:
+      bb495e7d-f915-49aa-8308-20cbf50527b1:
+        enabledByDefault: true
+        hasUrls: true
+        template: ''
+        uriFormat: 'testimonials/{slug}'
+    type: channel
+  a22a7023-72e8-4584-bcb0-6c768359eb78:
+    enableVersioning: true
+    entryTypes:
+      8d244c5e-d5a5-4c59-9f28-5c477a6bb205:
+        handle: homePage
+        hasTitleField: false
+        name: 'Home Page'
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: null
+    handle: homePage
+    name: 'Home Page'
+    propagateEntries: true
+    siteSettings:
+      bb495e7d-f915-49aa-8308-20cbf50527b1:
+        enabledByDefault: true
+        hasUrls: true
+        template: ''
+        uriFormat: __home__
+    type: single
+  cee11f09-3d45-404c-b878-086f3188cc64:
+    enableVersioning: true
+    entryTypes:
+      13cab383-e27e-43b1-b81d-be7477203913:
+        fieldLayouts:
+          a4758aaf-eed6-4037-8956-4916ac4d42be:
+            tabs:
+              -
+                fields:
+                  c22def8c-df38-483a-914e-8da4f8a8ff1c:
+                    required: false
+                    sortOrder: 1
+                  cbba18cd-b60d-4031-8fe3-cf7aad4ae810:
+                    required: false
+                    sortOrder: 2
+                name: Page
+                sortOrder: 1
+        handle: aboutUsPage
+        hasTitleField: false
+        name: 'About Us Page'
+        sortOrder: 1
+        titleFormat: '{section.name|raw}'
+        titleLabel: ''
+    handle: aboutUsPage
+    name: 'About Us Page'
+    propagateEntries: true
+    siteSettings:
+      bb495e7d-f915-49aa-8308-20cbf50527b1:
+        enabledByDefault: true
+        hasUrls: true
+        template: ''
+        uriFormat: /about-us
+    type: single
+siteGroups:
+  5370bb81-13aa-4aee-8fd2-c1bbbddd468f:
+    name: 'Carolina Roofing Siding Painting'
+sites:
+  bb495e7d-f915-49aa-8308-20cbf50527b1:
+    baseUrl: $DEFAULT_SITE_URL
+    handle: default
+    hasUrls: true
+    language: en-US
+    name: 'Carolina Roofing Siding Painting'
+    primary: true
+    siteGroup: 5370bb81-13aa-4aee-8fd2-c1bbbddd468f
+    sortOrder: 1
+system:
+  edition: solo
+  live: true
+  name: 'Carolina Roofing Siding Painting'
+  schemaVersion: 3.1.25
+  timeZone: America/New_York
+tagGroups:
+  b8200e98-56bc-434b-8524-8e231c2dca1b:
+    handle: recentWork
+    name: 'Recent Work'
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true
+volumes:
+  b3004120-501a-44fb-a7c5-f96a1c9a9548:
+    handle: carolinarspCdn
+    hasUrls: true
+    name: 'CarolinaRSP CDN'
+    settings:
+      bucket: carolinarsp-cdn
+      endpoint: 'https://sfo2.digitaloceanspaces.com'
+      expires: '1 hours'
+      keyId: HVA2ZDCSNVK2QRXRVZSN
+      region: sfo2
+      secret: T3HWd7YkLjPYjwTazBcnEONAaRiP7AhAjuA/Nt6mVGM
+      subfolder: cdn
+    sortOrder: '1'
+    type: vaersaagod\dospaces\Volume
+    url: 'https://carolinarsp-cdn.sfo2.cdn.digitaloceanspaces.com'
