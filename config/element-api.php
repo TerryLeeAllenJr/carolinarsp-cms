@@ -1,13 +1,48 @@
+
+
+
 <?php
 
 use craft\elements\Entry;
 use craft\helpers\UrlHelper;
 use craft\elements\GlobalSet;
 
+use CarolinaRSP\Controllers\Api\RecentWorkController;
+use CarolinaRSP\Controllers\Api\ServicesController;
+use CarolinaRSP\Controllers\Api\TestimonialsController;
+
+use CarolinaRSP\Transformers\RecentWorkTransformer;
+use CarolinaRSP\Transformers\ServicesTransformer;
+use CarolinaRSP\Transformers\TestimonialsTransformer;
+
+
+if(Craft::$app->request->isConsoleRequest) {
+    return [];
+}
+
+// Lets new up the controllers here. Gotta love some janky DI.
+$controllers = (object) [
+    'recentWorkController' =>  new RecentWorkController(new RecentWorkTransformer()),
+    'servicesController'  => new ServicesController(new ServicesTransformer()),
+    'testimonialsController' => new TestimonialsController(new TestimonialsTransformer()),
+];
+
+
 return [
     'endpoints' => [
+        RecentWorkController::API_VERSION.RecentWorkController::ENDPOINT => $controllers->recentWorkController->get(),
+        RecentWorkController::API_VERSION.RecentWorkController::ENDPOINT.'/<slug:{slug}>' => function($slug) use ($controllers) {
+            return $controllers->recentWorkController->getContentBySlug($slug);},
 
-        "api/globals/<handle:{handle}>" => function ($handle) {
+        ServicesController::API_VERSION.ServicesController::ENDPOINT => $controllers->servicesController->get(),
+        ServicesController::API_VERSION.ServicesController::ENDPOINT.'/<slug:{slug}>' => function($slug) use ($controllers) {
+            return $controllers->servicesController->getContentBySlug($slug);},
+
+        TestimonialsController::API_VERSION.TestimonialsController::ENDPOINT => $controllers->testimonialsController->get(),
+        TestimonialsController::API_VERSION.TestimonialsController::ENDPOINT.'/<slug:{slug}>' => function($slug) use ($controllers) {
+            return $controllers->testimonialsController->getContentBySlug($slug);},
+
+        "api/v1/globals/<handle:{handle}>" => function ($handle) {
             return [
                 'elementType' => GlobalSet::class,
                 'one' => true,
@@ -19,64 +54,6 @@ return [
                 },
             ];
         },
-
-        "api/services" => [
-            'elementsPerPage' => Craft::$app->request->getQueryParam('limit', 100),
-            'elementType' => Entry::class,
-            'criteria' => [
-                'section' => 'services',
-            ],
-            'transformer' => function (Entry $entry) use ($v1) {
-
-                return [
-                    'id' => $entry->id,
-                    'slug' => $entry->slug,
-                    //'featured' => $isFeaturedArticle,
-                    'title' => $entry->title,
-                    //'apiEndpoint' => UrlHelper::url("{$v1}articles/{$entry->slug}"),
-                    'pubDate' => $entry->postDate,
-
-
-
-                ];
-            },
-        ],
-
-        "api/services/<slug:{slug}>" => function ($slug) {
-            return [
-                'elementType' => Entry::class,
-                'one' => true,
-                'criteria' => [
-                    'section' => 'services',
-                    'slug' => $slug
-                ],
-                'transformer' => function(Entry $entry) {
-                    return [
-                        'title' => $entry->title,
-                        'featuredImage' => extractImageData($entry->featuredImage->all()),
-                        'content' => $entry->text,
-                    ];
-                },
-            ];
-        },
-
-
     ]
 ];
 
-function extractImageData($images) : array
-{
-    $parsed = [];
-    foreach($images AS $image) {
-        $parsed[] = (object) [
-            'url' => $image->url,
-            'focalPoint' => $image->focalPoint,
-            'width' => $image->width,
-            'height' => $image->height,
-            'mimeType' => $image->mimeType,
-            'title' => $image->title
-        ];
-    }
-
-    return $parsed;
-}
