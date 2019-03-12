@@ -38,5 +38,4 @@ class AbstractTransformer extends TransformerAbstract
             return null;
         }
     }
-
 }

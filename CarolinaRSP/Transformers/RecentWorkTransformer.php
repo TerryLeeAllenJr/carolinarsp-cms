@@ -4,10 +4,11 @@
  */
 namespace CarolinaRSP\Transformers;
 
+use League\Fractal\TransformerAbstract;
 use craft\elements\Entry;
 
 /**
- * Class RecentWorkTransformer
+ * Class PageContentTransformer
  * @package CarolinaRSP\Transformers
  */
 class RecentWorkTransformer extends AbstractTransformer
@@ -21,6 +22,7 @@ class RecentWorkTransformer extends AbstractTransformer
         return [
             'title' => $entry->title,
             'description' => $entry->recentWorkDescription,
+            'workCompletedDatePretty' =>$entry->workCompletedDate->format('M Y'),
             'workCompletedDate' =>$entry->workCompletedDate,
             'featuredImage' => $this->getImage($entry,'recentWorkFeaturedImage'),
             'slug' => $entry->slug,
